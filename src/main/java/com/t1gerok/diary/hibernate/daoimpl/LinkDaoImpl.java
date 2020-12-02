@@ -46,7 +46,7 @@ public class LinkDaoImpl extends BaseDaoImpl implements LinkDao {
     public boolean edit(Link link) throws DiaryException {
         LOGGER.debug("DAO delete");
         try {
-            getSession().saveOrUpdate(link);
+            getSession().update(link);
             getTransaction().commit();
         } catch (RuntimeException e) {
             getTransaction().rollback();

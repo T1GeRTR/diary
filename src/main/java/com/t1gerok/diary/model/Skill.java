@@ -29,6 +29,14 @@ public class Skill {
         this.projects = projects;
     }
 
+    public Skill(String name, String icon, List<Project> projects) {
+       this(0, name, icon, projects);
+    }
+
+    public Skill(String name, String icon) {
+        this(name, icon, new ArrayList<>());
+    }
+
     public Skill() {
     }
     public Integer getId() {

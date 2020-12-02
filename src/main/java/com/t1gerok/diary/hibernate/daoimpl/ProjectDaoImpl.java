@@ -20,11 +20,6 @@ public class ProjectDaoImpl extends BaseDaoImpl implements ProjectDao {
     public Project insert(Project project) throws DiaryException {
         LOGGER.debug("DAO insert");
         try {
-//            for(Link elem: project.getLinks()){
-//                elem.setProject(project);
-//                elem.setId((Integer) getSession().save(elem));
-//                getTransaction().commit();
-//            }
             project.setId((Integer) getSession().save(project));
             getTransaction().commit();
         } catch (RuntimeException e) {
@@ -56,11 +51,11 @@ public class ProjectDaoImpl extends BaseDaoImpl implements ProjectDao {
     public boolean edit(Project project) throws DiaryException {
         LOGGER.debug("DAO delete");
         try {
-            getSession().saveOrUpdate(project);
+            getSession().update(project);
             getTransaction().commit();
         } catch (RuntimeException e) {
             getTransaction().rollback();
-            throw new DiaryException(ErrorCode.CANT_EDIT_LINK, project.getId());
+            throw new DiaryException(ErrorCode.CANT_EDIT_PROJECT, project.getId());
         }
         return true;
     }

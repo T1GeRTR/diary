@@ -16,7 +16,7 @@ public class LinkType {
     private String name;
     @Column(name = "icon")
     private String icon;
-    @OneToMany(targetEntity = Link.class, cascade = CascadeType.REMOVE)
+    @OneToMany(targetEntity = Link.class, mappedBy = "project", cascade = CascadeType.MERGE)
     private List<Link> links = new ArrayList<>();
 
     public LinkType() {
@@ -32,6 +32,11 @@ public class LinkType {
     public LinkType(String name, String icon, List<Link> links) {
         this(0, name, icon, links);
     }
+
+    public LinkType(String name, String icon) {
+        this(name, icon, new ArrayList<>());
+    }
+
 
     public Integer getId() {
         return id;
