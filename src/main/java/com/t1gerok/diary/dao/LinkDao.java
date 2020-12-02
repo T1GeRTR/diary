@@ -5,7 +5,7 @@ import com.t1gerok.diary.model.Link;
 
 import java.util.List;
 
-public interface ProjectLinkDao {
+public interface LinkDao {
     Link insert(Link link) throws DiaryException;
 
     boolean delete (int id) throws DiaryException;

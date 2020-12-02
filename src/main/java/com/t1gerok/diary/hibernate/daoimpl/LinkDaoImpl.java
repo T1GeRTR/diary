@@ -1,6 +1,6 @@
 package com.t1gerok.diary.hibernate.daoimpl;
 
-import com.t1gerok.diary.dao.ProjectLinkDao;
+import com.t1gerok.diary.dao.LinkDao;
 import com.t1gerok.diary.exception.DiaryException;
 import com.t1gerok.diary.exception.ErrorCode;
 import com.t1gerok.diary.model.Link;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class LinkDaoImpl extends BaseDaoImpl implements ProjectLinkDao {
+public class LinkDaoImpl extends BaseDaoImpl implements LinkDao {
     private static final Logger LOGGER = LoggerFactory.getLogger(LinkDaoImpl.class);
 
     @Override
