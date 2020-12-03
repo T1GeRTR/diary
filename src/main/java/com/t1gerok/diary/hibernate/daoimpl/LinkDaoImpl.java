@@ -16,7 +16,7 @@ public class LinkDaoImpl extends BaseDaoImpl implements LinkDao {
 
     @Override
     public Link insert(Link link) throws DiaryException {
-        LOGGER.debug("DAO insert");
+        LOGGER.debug("LinkDao insert");
         try {
             link.setId((Integer) getSession().save(link));
             getTransaction().commit();
@@ -29,7 +29,7 @@ public class LinkDaoImpl extends BaseDaoImpl implements LinkDao {
 
     @Override
     public boolean delete(int id) throws DiaryException {
-        LOGGER.debug("DAO delete");
+        LOGGER.debug("LinkDao delete");
         try {
             Link link = (Link) getSession().get(Link.class, id);
             getTransaction().commit();
@@ -44,7 +44,7 @@ public class LinkDaoImpl extends BaseDaoImpl implements LinkDao {
 
     @Override
     public boolean edit(Link link) throws DiaryException {
-        LOGGER.debug("DAO delete");
+        LOGGER.debug("LinkDao delete");
         try {
             getSession().update(link);
             getTransaction().commit();
@@ -57,7 +57,7 @@ public class LinkDaoImpl extends BaseDaoImpl implements LinkDao {
 
     @Override
     public Link getById(int id) throws DiaryException {
-        LOGGER.debug("DAO delete");
+        LOGGER.debug("LinkDao delete");
         try {
             Link link = (Link) getSession().get(Link.class, id);
             if (link == null){
@@ -74,7 +74,7 @@ public class LinkDaoImpl extends BaseDaoImpl implements LinkDao {
 
     @Override
     public List getAll() throws DiaryException {
-        LOGGER.debug("DAO delete");
+        LOGGER.debug("LinkDao delete");
         try {
             List<Link> links = getSession().createQuery("FROM Link").list();
             if (links.size() == 0){

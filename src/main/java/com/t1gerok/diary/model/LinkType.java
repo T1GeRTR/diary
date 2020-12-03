@@ -33,6 +33,10 @@ public class LinkType {
         this(0, name, icon, links);
     }
 
+    public LinkType(Integer id, String name, String icon) {
+        this(id, name, icon, new ArrayList<>());
+    }
+
     public LinkType(String name, String icon) {
         this(name, icon, new ArrayList<>());
     }

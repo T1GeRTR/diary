@@ -1,20 +1,19 @@
 package com.t1gerok.diary.response;
 
+import com.t1gerok.diary.model.LinkType;
 import com.t1gerok.diary.model.Project;
 
 public class InsertLinkDtoResponse {
     private int id;
-    private String name;
-    private String icon;
-    private String url;
     private Project project;
+    private LinkType linkType;
+    private String url;
 
-    public InsertLinkDtoResponse(int id, String name, String icon, String url, Project project) {
+    public InsertLinkDtoResponse(int id, Project project, LinkType linkType, String url) {
         this.id = id;
-        this.name = name;
-        this.icon = icon;
-        this.url = url;
         this.project = project;
+        this.linkType = linkType;
+        this.url = url;
     }
 
     public int getId() {
@@ -25,20 +24,20 @@ public class InsertLinkDtoResponse {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Project getProject() {
+        return project;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProject(Project project) {
+        this.project = project;
     }
 
-    public String getIcon() {
-        return icon;
+    public LinkType getLinkType() {
+        return linkType;
     }
 
-    public void setIcon(String icon) {
-        this.icon = icon;
+    public void setLinkType(LinkType linkType) {
+        this.linkType = linkType;
     }
 
     public String getUrl() {
@@ -47,13 +46,5 @@ public class InsertLinkDtoResponse {
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
     }
 }

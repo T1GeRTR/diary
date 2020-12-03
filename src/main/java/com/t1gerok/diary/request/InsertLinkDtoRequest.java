@@ -4,42 +4,15 @@ import javax.validation.constraints.NotNull;
 
 public class InsertLinkDtoRequest {
     @NotNull
-    private String name;
+    private Integer projectId;
     @NotNull
-    private String icon;
+    private Integer linkTypeId;
     @NotNull
     private String url;
-    @NotNull
-    private Integer projectId;
 
-    public InsertLinkDtoRequest(@NotNull String name, @NotNull String icon, @NotNull String url, @NotNull Integer projectId) {
-        this.name = name;
-        this.icon = icon;
-        this.url = url;
+    public InsertLinkDtoRequest(@NotNull Integer projectId, @NotNull Integer linkTypeId, @NotNull String url) {
         this.projectId = projectId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
+        this.linkTypeId = linkTypeId;
         this.url = url;
     }
 
@@ -49,5 +22,21 @@ public class InsertLinkDtoRequest {
 
     public void setProjectId(Integer projectId) {
         this.projectId = projectId;
+    }
+
+    public Integer getLinkTypeId() {
+        return linkTypeId;
+    }
+
+    public void setLinkTypeId(Integer linkTypeId) {
+        this.linkTypeId = linkTypeId;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

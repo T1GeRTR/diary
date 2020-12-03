@@ -1,21 +1,19 @@
 package com.t1gerok.diary.response;
 
+import com.t1gerok.diary.model.LinkType;
 import com.t1gerok.diary.model.Project;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class GetByIdLinkDtoResponse {
     private int id;
-    private String name;
-    private String icon;
-    private List<Project> projects = new ArrayList<>();
+    private Project project;
+    private LinkType linkType;
+    private String url;
 
-    public GetByIdLinkDtoResponse(int id, String name, String icon, List<Project> projects) {
+    public GetByIdLinkDtoResponse(int id, Project project, LinkType linkType, String url) {
         this.id = id;
-        this.name = name;
-        this.icon = icon;
-        this.projects = projects;
+        this.project = project;
+        this.linkType = linkType;
+        this.url = url;
     }
 
     public int getId() {
@@ -26,27 +24,27 @@ public class GetByIdLinkDtoResponse {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Project getProject() {
+        return project;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProject(Project project) {
+        this.project = project;
     }
 
-    public String getIcon() {
-        return icon;
+    public LinkType getLinkType() {
+        return linkType;
     }
 
-    public void setIcon(String icon) {
-        this.icon = icon;
+    public void setLinkType(LinkType linkType) {
+        this.linkType = linkType;
     }
 
-    public List<Project> getProjects() {
-        return projects;
+    public String getUrl() {
+        return url;
     }
 
-    public void setProjects(List<Project> projects) {
-        this.projects = projects;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

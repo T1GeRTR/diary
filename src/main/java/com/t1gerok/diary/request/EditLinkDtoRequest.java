@@ -6,37 +6,48 @@ public class EditLinkDtoRequest {
     @NotNull
     private int id;
     @NotNull
-    private String name;
+    private Integer projectId;
     @NotNull
-    private String icon;
+    private Integer linkTypeId;
+    @NotNull
+    private String url;
 
-    public EditLinkDtoRequest(int id, String name, String icon) {
+    public EditLinkDtoRequest(@NotNull int id, @NotNull Integer projectId, @NotNull Integer linkTypeId, @NotNull String url) {
         this.id = id;
-        this.name = name;
-        this.icon = icon;
+        this.projectId = projectId;
+        this.linkTypeId = linkTypeId;
+        this.url = url;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Integer getProjectId() {
+        return projectId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProjectId(Integer projectId) {
+        this.projectId = projectId;
     }
 
-    public String getIcon() {
-        return icon;
+    public Integer getLinkTypeId() {
+        return linkTypeId;
     }
 
-    public void setIcon(String icon) {
-        this.icon = icon;
+    public void setLinkTypeId(Integer linkTypeId) {
+        this.linkTypeId = linkTypeId;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

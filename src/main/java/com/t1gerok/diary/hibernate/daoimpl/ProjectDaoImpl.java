@@ -4,7 +4,6 @@ import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExceptio
 import com.t1gerok.diary.dao.ProjectDao;
 import com.t1gerok.diary.exception.DiaryException;
 import com.t1gerok.diary.exception.ErrorCode;
-import com.t1gerok.diary.model.Link;
 import com.t1gerok.diary.model.Project;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,11 +13,11 @@ import java.util.List;
 
 @Component
 public class ProjectDaoImpl extends BaseDaoImpl implements ProjectDao {
-    private static final Logger LOGGER = LoggerFactory.getLogger(LinkDaoImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ProjectDaoImpl.class);
 
     @Override
     public Project insert(Project project) throws DiaryException {
-        LOGGER.debug("DAO insert");
+        LOGGER.debug("ProjectDao insert");
         try {
             project.setId((Integer) getSession().save(project));
             getTransaction().commit();
@@ -34,7 +33,7 @@ public class ProjectDaoImpl extends BaseDaoImpl implements ProjectDao {
 
     @Override
     public boolean delete(int id) throws DiaryException {
-        LOGGER.debug("DAO delete");
+        LOGGER.debug("ProjectDao delete");
         try {
             Project project = (Project) getSession().get(Project.class, id);
             getTransaction().commit();
@@ -49,7 +48,7 @@ public class ProjectDaoImpl extends BaseDaoImpl implements ProjectDao {
 
     @Override
     public boolean edit(Project project) throws DiaryException {
-        LOGGER.debug("DAO delete");
+        LOGGER.debug("ProjectDao delete");
         try {
             getSession().update(project);
             getTransaction().commit();
@@ -62,7 +61,7 @@ public class ProjectDaoImpl extends BaseDaoImpl implements ProjectDao {
 
     @Override
     public Project getById(int id) throws DiaryException {
-        LOGGER.debug("DAO delete");
+        LOGGER.debug("ProjectDao delete");
         try {
             Project project = (Project) getSession().get(Project.class, id);
             if (project == null){
@@ -79,7 +78,7 @@ public class ProjectDaoImpl extends BaseDaoImpl implements ProjectDao {
 
     @Override
     public List<Project> getAll() throws DiaryException {
-        LOGGER.debug("DAO delete");
+        LOGGER.debug("ProjectDao delete");
         try {
             List<Project> projects = getSession().createQuery("FROM Project").list();
             if (projects.size() == 0){

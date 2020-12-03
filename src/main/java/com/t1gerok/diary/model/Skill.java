@@ -33,6 +33,10 @@ public class Skill {
        this(0, name, icon, projects);
     }
 
+    public Skill(Integer id, String name, String icon) {
+        this(id, name, icon, new ArrayList<>());
+    }
+
     public Skill(String name, String icon) {
         this(name, icon, new ArrayList<>());
     }
