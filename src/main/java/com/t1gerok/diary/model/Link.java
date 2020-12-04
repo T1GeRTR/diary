@@ -1,5 +1,8 @@
 package com.t1gerok.diary.model;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -11,6 +14,7 @@ public class Link {
     @Column(name = "id")
     private Integer id;
     @ManyToOne(fetch = FetchType.EAGER)
+    @Fetch(FetchMode.SELECT)
     @JoinColumn(name = "project_id")
     private Project project;
     @ManyToOne(fetch = FetchType.EAGER)

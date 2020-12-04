@@ -10,6 +10,9 @@ public class InsertLinkDtoRequest {
     @NotNull
     private String url;
 
+    public InsertLinkDtoRequest() {
+    }
+
     public InsertLinkDtoRequest(@NotNull Integer projectId, @NotNull Integer linkTypeId, @NotNull String url) {
         this.projectId = projectId;
         this.linkTypeId = linkTypeId;

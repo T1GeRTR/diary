@@ -1,6 +1,12 @@
 package com.t1gerok.diary.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.*;
+
 import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -64,6 +70,7 @@ public class Project {
     }
 
     @ManyToMany
+    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinTable(name = "project_skill",
             joinColumns = {@JoinColumn(name = "project_id")},
             inverseJoinColumns = {@JoinColumn(name = "skill_id")})
@@ -76,6 +83,7 @@ public class Project {
     }
 
     @OneToMany(targetEntity = Link.class, mappedBy = "project", cascade = CascadeType.MERGE)
+    @LazyCollection(LazyCollectionOption.FALSE)
     public List<Link> getLinks() {
         return links;
     }

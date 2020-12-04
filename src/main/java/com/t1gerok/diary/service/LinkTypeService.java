@@ -1,5 +1,6 @@
 package com.t1gerok.diary.service;
 
+import com.t1gerok.diary.converter.Converter;
 import com.t1gerok.diary.dao.LinkTypeDao;
 import com.t1gerok.diary.exception.DiaryException;
 import com.t1gerok.diary.exception.ErrorCode;
@@ -60,7 +61,7 @@ public class LinkTypeService {
         if (linkType == null) {
             throw new DiaryException(ErrorCode.CANT_FIND_LINK_TYPE_BY_ID, id);
         }
-        return new GetByIdLinkTypeDtoResponse(linkType.getId(), linkType.getName(), linkType.getIcon(), linkType.getLinks());
+        return new GetByIdLinkTypeDtoResponse(linkType.getId(), linkType.getName(), linkType.getIcon(), Converter.convertLinkModelToDtoProject(linkType.getLinks()));
     }
 
     public List<GetAllLinkTypeDtoResponse> getAll() throws DiaryException {
@@ -71,7 +72,7 @@ public class LinkTypeService {
         }
         List<GetAllLinkTypeDtoResponse> responses = new ArrayList<>();
         for (LinkType elem : linkTypes) {
-            responses.add(new GetAllLinkTypeDtoResponse(elem.getId(), elem.getName(), elem.getIcon(), elem.getLinks()));
+            responses.add(new GetAllLinkTypeDtoResponse(elem.getId(), elem.getName(), elem.getIcon(), Converter.convertLinkModelToDtoProject(elem.getLinks())));
         }
         return responses;
     }

@@ -1,5 +1,11 @@
 package com.t1gerok.diary.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +24,8 @@ public class Skill {
     private String icon;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "project_skill",
-            joinColumns = {@JoinColumn(name = "Skill_id")},
-            inverseJoinColumns = {@JoinColumn(name = "Project_id")})
+            joinColumns = {@JoinColumn(name = "skill_id")},
+            inverseJoinColumns = {@JoinColumn(name = "project_id")})
     private List<Project> projects = new ArrayList<>();
 
     public Skill(Integer id, String name, String icon, List<Project> projects) {

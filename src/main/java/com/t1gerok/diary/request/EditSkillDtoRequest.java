@@ -10,11 +10,18 @@ public class EditSkillDtoRequest {
     @NotNull
     private String icon;
 
+    public EditSkillDtoRequest() {
+    }
+
     public EditSkillDtoRequest(@NotNull int id, @NotNull String name, @NotNull String icon) {
         this.id = id;
         this.name = name;
         this.icon = icon;
     }
+    public EditSkillDtoRequest(@NotNull String name, @NotNull String icon) {
+        this(0, name, icon);
+    }
+
 
     public int getId() {
         return id;

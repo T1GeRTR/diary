@@ -1,5 +1,6 @@
 package com.t1gerok.diary.service;
 
+import com.t1gerok.diary.converter.Converter;
 import com.t1gerok.diary.dao.LinkDao;
 import com.t1gerok.diary.dao.LinkTypeDao;
 import com.t1gerok.diary.dao.ProjectDao;
@@ -26,11 +27,8 @@ import java.util.List;
 @Component
 public class LinkService {
     private static final Logger LOGGER = LoggerFactory.getLogger(LinkService.class);
-    @Autowired
     private LinkDao linkDao;
-    @Autowired
     private ProjectDao projectDao;
-    @Autowired
     private LinkTypeDao linkTypeDao;
 
     public LinkService(LinkDao linkDao, ProjectDao projectDao, LinkTypeDao linkTypeDao) {
@@ -54,7 +52,7 @@ public class LinkService {
         if (link.getId() == 0) {
             throw new DiaryException(ErrorCode.CANT_INSERT_LINK_URL, request.getUrl());
         }
-        return new InsertLinkDtoResponse(link.getId(), link.getProject(), link.getLinkType(), link.getUrl());
+        return new InsertLinkDtoResponse(link.getId(), Converter.convertProjectModelToDto(project), Converter.convertLinkTypeModelToDto(link.getLinkType()), link.getUrl());
     }
 
     public EmptyResponse delete(int id) throws DiaryException {
@@ -81,7 +79,7 @@ public class LinkService {
         if (link == null){
             throw new DiaryException(ErrorCode.CANT_FIND_LINK_BY_ID, id);
         }
-        return new GetByIdLinkDtoResponse(link.getId(), link.getProject(), link.getLinkType(), link.getUrl());
+        return new GetByIdLinkDtoResponse(link.getId(), Converter.convertProjectModelToDto(link.getProject()), Converter.convertLinkTypeModelToDto(link.getLinkType()), link.getUrl());
     }
 
     public List<GetAllLinkDtoResponse> getAll() throws DiaryException{
@@ -92,7 +90,7 @@ public class LinkService {
         }
         List<GetAllLinkDtoResponse> responses = new ArrayList<>();
         for(Link elem: links){
-            responses.add(new GetAllLinkDtoResponse(elem.getId(), elem.getProject(), elem.getLinkType(), elem.getUrl()));
+            responses.add(new GetAllLinkDtoResponse(elem.getId(), Converter.convertProjectModelToDto(elem.getProject()), Converter.convertLinkTypeModelToDto(elem.getLinkType()), elem.getUrl()));
         }
         return responses;
     }

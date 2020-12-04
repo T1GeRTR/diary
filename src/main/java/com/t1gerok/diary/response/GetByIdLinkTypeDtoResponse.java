@@ -1,17 +1,14 @@
 package com.t1gerok.diary.response;
 
-import com.t1gerok.diary.model.Link;
-import com.t1gerok.diary.model.Project;
-
 import java.util.List;
 
 public class GetByIdLinkTypeDtoResponse {
     private int id;
     private String name;
     private String icon;
-    private List<Link> links;
+    private List<LinkDtoProject> links;
 
-    public GetByIdLinkTypeDtoResponse(int id, String name, String icon, List<Link> links) {
+    public GetByIdLinkTypeDtoResponse(int id, String name, String icon, List<LinkDtoProject> links) {
         this.id = id;
         this.name = name;
         this.icon = icon;
@@ -42,11 +39,11 @@ public class GetByIdLinkTypeDtoResponse {
         this.icon = icon;
     }
 
-    public List<Link> getLinks() {
+    public List<LinkDtoProject> getLinks() {
         return links;
     }
 
-    public void setLinks(List<Link> links) {
+    public void setLinks(List<LinkDtoProject> links) {
         this.links = links;
     }
 }

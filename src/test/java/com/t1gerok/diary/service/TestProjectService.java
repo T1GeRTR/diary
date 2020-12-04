@@ -1,4 +1,4 @@
-package service;
+package com.t1gerok.diary.service;
 
 import com.t1gerok.diary.dao.LinkDao;
 import com.t1gerok.diary.dao.ProjectDao;

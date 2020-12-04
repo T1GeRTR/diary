@@ -1,0 +1,295 @@
+org.springframework.web.servlet.DispatcherServlet 2020.12.04 16:39:55.712 DEBUG [http-nio-8081-exec-9] o.s.w.s.DispatcherServlet: Completed 200 OK
+org.springframework.web.servlet.DispatcherServlet 2020.12.04 16:40:41.545 DEBUG [http-nio-8081-exec-10] o.s.w.s.DispatcherServlet: GET "/api/projects/1", parameters={}
+org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping 2020.12.04 16:40:41.547 DEBUG [http-nio-8081-exec-10] o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped to com.t1gerok.diary.controller.ProjectController#getById(int)
+com.t1gerok.diary.service.ProjectService 2020.12.04 16:40:41.551 DEBUG [http-nio-8081-exec-10] c.t.d.s.ProjectService: ProjectService getById
+com.t1gerok.diary.hibernate.daoimpl.ProjectDaoImpl 2020.12.04 16:40:41.551 DEBUG [http-nio-8081-exec-10] c.t.d.h.d.ProjectDaoImpl: ProjectDao delete
+org.hibernate.engine.transaction.spi.AbstractTransactionImpl 2020.12.04 16:40:41.552 DEBUG [http-nio-8081-exec-10] o.h.e.t.s.AbstractTransactionImpl: begin
+org.hibernate.engine.jdbc.internal.LogicalConnectionImpl 2020.12.04 16:40:41.552 DEBUG [http-nio-8081-exec-10] o.h.e.j.i.LogicalConnectionImpl: Obtaining JDBC connection
+org.hibernate.engine.jdbc.internal.LogicalConnectionImpl 2020.12.04 16:40:41.552 DEBUG [http-nio-8081-exec-10] o.h.e.j.i.LogicalConnectionImpl: Obtained JDBC connection
+org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction 2020.12.04 16:40:41.552 DEBUG [http-nio-8081-exec-10] o.h.e.t.i.j.JdbcTransaction: initial autocommit status: false
+org.hibernate.loader.Loader 2020.12.04 16:40:41.553 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Loading entity: [com.t1gerok.diary.model.Project#1]
+org.hibernate.SQL 2020.12.04 16:40:41.553 DEBUG [http-nio-8081-exec-10] o.h.SQL: select project0_.id as id1_2_0_, project0_.name as name2_2_0_, project0_.preview as preview3_2_0_ from project project0_ where project0_.id=?
+org.hibernate.loader.Loader 2020.12.04 16:40:41.554 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:40:41.554 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.554 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Project#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.555 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Project#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.556 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.SQL 2020.12.04 16:40:41.556 DEBUG [http-nio-8081-exec-10] o.h.SQL: select skills0_.project_id as project_1_2_1_, skills0_.skill_id as skill_id2_3_1_, skill1_.id as id1_4_0_, skill1_.icon as icon2_4_0_, skill1_.name as name3_4_0_ from project_skill skills0_ inner join skill skill1_ on skills0_.skill_id=skill1_.id where skills0_.project_id=?
+org.hibernate.loader.Loader 2020.12.04 16:40:41.557 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.557 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:40:41.557 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Skill#9]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.558 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.558 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set row: 1
+org.hibernate.loader.Loader 2020.12.04 16:40:41.558 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Skill#10]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.558 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set row: 2
+org.hibernate.loader.Loader 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Skill#11]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Skill#9]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Skill#9]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Skill#10]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Skill#10]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Skill#11]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Skill#11]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Project.skills
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.559 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Project.skills
+org.hibernate.loader.Loader 2020.12.04 16:40:41.560 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:40:41.560 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Skill.projects#11]
+org.hibernate.SQL 2020.12.04 16:40:41.560 DEBUG [http-nio-8081-exec-10] o.h.SQL: select projects0_.skill_id as skill_id2_4_1_, projects0_.project_id as project_1_3_1_, project1_.id as id1_2_0_, project1_.name as name2_2_0_, project1_.preview as preview3_2_0_ from project_skill projects0_ inner join project project1_ on projects0_.project_id=project1_.id where projects0_.skill_id=?
+org.hibernate.loader.Loader 2020.12.04 16:40:41.563 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Skill.projects#11]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.563 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:40:41.563 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.563 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Skill.projects#11]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.563 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.563 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Skill.projects#11]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.563 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.loader.Loader 2020.12.04 16:40:41.564 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:40:41.564 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Skill.projects#10]
+org.hibernate.SQL 2020.12.04 16:40:41.564 DEBUG [http-nio-8081-exec-10] o.h.SQL: select projects0_.skill_id as skill_id2_4_1_, projects0_.project_id as project_1_3_1_, project1_.id as id1_2_0_, project1_.name as name2_2_0_, project1_.preview as preview3_2_0_ from project_skill projects0_ inner join project project1_ on projects0_.project_id=project1_.id where projects0_.skill_id=?
+org.hibernate.loader.Loader 2020.12.04 16:40:41.566 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Skill.projects#10]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.566 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:40:41.566 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.566 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Skill.projects#10]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.566 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.566 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Skill.projects#10]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.566 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.loader.Loader 2020.12.04 16:40:41.567 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:40:41.567 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Skill.projects#9]
+org.hibernate.SQL 2020.12.04 16:40:41.567 DEBUG [http-nio-8081-exec-10] o.h.SQL: select projects0_.skill_id as skill_id2_4_1_, projects0_.project_id as project_1_3_1_, project1_.id as id1_2_0_, project1_.name as name2_2_0_, project1_.preview as preview3_2_0_ from project_skill projects0_ inner join project project1_ on projects0_.project_id=project1_.id where projects0_.skill_id=?
+org.hibernate.loader.Loader 2020.12.04 16:40:41.568 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Skill.projects#9]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.569 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:40:41.569 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.569 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Skill.projects#9]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.569 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.569 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Skill.projects#9]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.569 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.loader.Loader 2020.12.04 16:40:41.570 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:40:41.570 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Project.links#1]
+org.hibernate.SQL 2020.12.04 16:40:41.570 DEBUG [http-nio-8081-exec-10] o.h.SQL: select links0_.project_id as project_4_2_2_, links0_.id as id1_0_2_, links0_.id as id1_0_1_, links0_.link_type_id as link_typ3_0_1_, links0_.project_id as project_4_0_1_, links0_.url as url2_0_1_, linktype1_.id as id1_1_0_, linktype1_.icon as icon2_1_0_, linktype1_.name as name3_1_0_ from link links0_ left outer join link_type linktype1_ on links0_.link_type_id=linktype1_.id where links0_.project_id=?
+org.hibernate.loader.Loader 2020.12.04 16:40:41.572 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Project.links#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.572 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:40:41.572 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.LinkType#1], EntityKey[com.t1gerok.diary.model.Link#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.572 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.links#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.572 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.LinkType#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.572 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.LinkType#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.572 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Link#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:40:41.573 DEBUG [http-nio-8081-exec-10] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Link#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.573 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Project.links
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.573 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Project.links#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.573 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Project.links
+org.hibernate.loader.Loader 2020.12.04 16:40:41.574 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:40:41.575 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.LinkType.links#1]
+org.hibernate.SQL 2020.12.04 16:40:41.575 DEBUG [http-nio-8081-exec-10] o.h.SQL: select links0_.project_id as project_4_1_2_, links0_.id as id1_0_2_, links0_.id as id1_0_1_, links0_.link_type_id as link_typ3_0_1_, links0_.project_id as project_4_0_1_, links0_.url as url2_0_1_, linktype1_.id as id1_1_0_, linktype1_.icon as icon2_1_0_, linktype1_.name as name3_1_0_ from link links0_ left outer join link_type linktype1_ on links0_.link_type_id=linktype1_.id where links0_.project_id=?
+org.hibernate.loader.Loader 2020.12.04 16:40:41.576 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.LinkType.links#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.576 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:40:41.576 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.LinkType#1], EntityKey[com.t1gerok.diary.model.Link#1]
+org.hibernate.loader.Loader 2020.12.04 16:40:41.576 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.LinkType.links#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.577 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.LinkType.links
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.577 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.LinkType.links#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:40:41.577 DEBUG [http-nio-8081-exec-10] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.LinkType.links
+org.hibernate.loader.Loader 2020.12.04 16:40:41.577 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:40:41.577 DEBUG [http-nio-8081-exec-10] o.h.l.Loader: Done entity load
+org.hibernate.engine.transaction.spi.AbstractTransactionImpl 2020.12.04 16:40:41.577 DEBUG [http-nio-8081-exec-10] o.h.e.t.s.AbstractTransactionImpl: committing
+org.hibernate.event.internal.AbstractFlushingEventListener 2020.12.04 16:40:41.577 DEBUG [http-nio-8081-exec-10] o.h.e.i.AbstractFlushingEventListener: Processing flush-time cascades
+org.hibernate.event.internal.AbstractFlushingEventListener 2020.12.04 16:40:41.578 DEBUG [http-nio-8081-exec-10] o.h.e.i.AbstractFlushingEventListener: Dirty checking collections
+org.hibernate.engine.internal.Collections 2020.12.04 16:40:41.578 DEBUG [http-nio-8081-exec-10] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Project.links#1], was: [com.t1gerok.diary.model.Project.links#1] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:40:41.578 DEBUG [http-nio-8081-exec-10] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Project.skills#1], was: [com.t1gerok.diary.model.Project.skills#1] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:40:41.578 DEBUG [http-nio-8081-exec-10] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Skill.projects#9], was: [com.t1gerok.diary.model.Skill.projects#9] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:40:41.578 DEBUG [http-nio-8081-exec-10] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Skill.projects#10], was: [com.t1gerok.diary.model.Skill.projects#10] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Skill.projects#11], was: [com.t1gerok.diary.model.Skill.projects#11] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.LinkType.links#1], was: [com.t1gerok.diary.model.LinkType.links#1] (initialized)
+org.hibernate.event.internal.AbstractFlushingEventListener 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.e.i.AbstractFlushingEventListener: Flushed: 0 insertions, 0 updates, 0 deletions to 6 objects
+org.hibernate.event.internal.AbstractFlushingEventListener 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.e.i.AbstractFlushingEventListener: Flushed: 0 (re)creations, 0 updates, 0 removals to 6 collections
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.i.u.EntityPrinter: Listing entities:
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Skill{projects=[com.t1gerok.diary.model.Project#1], icon=../assets/icons/mybatis.png, name=MyBatis, id=11}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Project{preview=previewUrl, skills=[com.t1gerok.diary.model.Skill#9, com.t1gerok.diary.model.Skill#10, com.t1gerok.diary.model.Skill#11], name=Hospital - Воскресная школа ТамТэк, links=[com.t1gerok.diary.model.Link#1], id=1}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Skill{projects=[com.t1gerok.diary.model.Project#1], icon=../assets/icons/java.png, name=Java, id=9}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.LinkType{icon=../assets/icons/github.png, name=GitHub, links=[com.t1gerok.diary.model.Link#1], id=1}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Link{project=com.t1gerok.diary.model.Project#1, linkType=com.t1gerok.diary.model.LinkType#1, id=1, url=https://github.com/T1GeRTR/hospital}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:40:41.579 DEBUG [http-nio-8081-exec-10] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Skill{projects=[com.t1gerok.diary.model.Project#1], icon=../assets/icons/spring.png, name=Spring, id=10}
+org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction 2020.12.04 16:40:41.580 DEBUG [http-nio-8081-exec-10] o.h.e.t.i.j.JdbcTransaction: committed JDBC Connection
+org.hibernate.engine.jdbc.internal.LogicalConnectionImpl 2020.12.04 16:40:41.580 DEBUG [http-nio-8081-exec-10] o.h.e.j.i.LogicalConnectionImpl: Releasing JDBC connection
+org.hibernate.engine.jdbc.internal.LogicalConnectionImpl 2020.12.04 16:40:41.580 DEBUG [http-nio-8081-exec-10] o.h.e.j.i.LogicalConnectionImpl: Released JDBC connection
+org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor 2020.12.04 16:40:41.580 DEBUG [http-nio-8081-exec-10] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor: Using 'application/json', given [*/*] and supported [application/json]
+org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor 2020.12.04 16:40:41.581 DEBUG [http-nio-8081-exec-10] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor: Writing [com.t1gerok.diary.response.GetByIdProjectDtoResponse@28e93475]
+org.springframework.web.servlet.DispatcherServlet 2020.12.04 16:40:41.582 DEBUG [http-nio-8081-exec-10] o.s.w.s.DispatcherServlet: Completed 200 OK
+org.springframework.web.servlet.DispatcherServlet 2020.12.04 16:46:34.451 DEBUG [http-nio-8081-exec-2] o.s.w.s.DispatcherServlet: GET "/api/projects/2", parameters={}
+org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping 2020.12.04 16:46:34.452 DEBUG [http-nio-8081-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped to com.t1gerok.diary.controller.ProjectController#getById(int)
+com.t1gerok.diary.service.ProjectService 2020.12.04 16:46:34.453 DEBUG [http-nio-8081-exec-2] c.t.d.s.ProjectService: ProjectService getById
+com.t1gerok.diary.hibernate.daoimpl.ProjectDaoImpl 2020.12.04 16:46:34.453 DEBUG [http-nio-8081-exec-2] c.t.d.h.d.ProjectDaoImpl: ProjectDao delete
+org.hibernate.engine.transaction.spi.AbstractTransactionImpl 2020.12.04 16:46:34.453 DEBUG [http-nio-8081-exec-2] o.h.e.t.s.AbstractTransactionImpl: begin
+org.hibernate.engine.jdbc.internal.LogicalConnectionImpl 2020.12.04 16:46:34.453 DEBUG [http-nio-8081-exec-2] o.h.e.j.i.LogicalConnectionImpl: Obtaining JDBC connection
+org.hibernate.engine.jdbc.internal.LogicalConnectionImpl 2020.12.04 16:46:34.454 DEBUG [http-nio-8081-exec-2] o.h.e.j.i.LogicalConnectionImpl: Obtained JDBC connection
+org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction 2020.12.04 16:46:34.454 DEBUG [http-nio-8081-exec-2] o.h.e.t.i.j.JdbcTransaction: initial autocommit status: false
+org.hibernate.loader.Loader 2020.12.04 16:46:34.454 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading entity: [com.t1gerok.diary.model.Project#2]
+org.hibernate.SQL 2020.12.04 16:46:34.454 DEBUG [http-nio-8081-exec-2] o.h.SQL: select project0_.id as id1_2_0_, project0_.name as name2_2_0_, project0_.preview as preview3_2_0_ from project project0_ where project0_.id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.456 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.456 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#2]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.456 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Project#2]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.457 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Project#2]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.458 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Project.skills#2]
+org.hibernate.SQL 2020.12.04 16:46:34.458 DEBUG [http-nio-8081-exec-2] o.h.SQL: select skills0_.project_id as project_1_2_1_, skills0_.skill_id as skill_id2_3_1_, skill1_.id as id1_4_0_, skill1_.icon as icon2_4_0_, skill1_.name as name3_4_0_ from project_skill skills0_ inner join skill skill1_ on skills0_.skill_id=skill1_.id where skills0_.project_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.459 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Project.skills#2]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.459 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.460 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Skill#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.460 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.skills#2]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.460 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 1
+org.hibernate.loader.Loader 2020.12.04 16:46:34.461 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Skill#2]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.461 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.skills#2]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.462 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Skill#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.462 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Skill#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.462 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Skill#2]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.462 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Skill#2]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.462 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Project.skills
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.462 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Project.skills#2]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.462 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Project.skills
+org.hibernate.loader.Loader 2020.12.04 16:46:34.463 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.463 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Skill.projects#2]
+org.hibernate.SQL 2020.12.04 16:46:34.463 DEBUG [http-nio-8081-exec-2] o.h.SQL: select projects0_.skill_id as skill_id2_4_1_, projects0_.project_id as project_1_3_1_, project1_.id as id1_2_0_, project1_.name as name2_2_0_, project1_.preview as preview3_2_0_ from project_skill projects0_ inner join project project1_ on projects0_.project_id=project1_.id where projects0_.skill_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.465 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Skill.projects#2]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.465 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.465 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#2]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.465 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Skill.projects#2]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.465 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.465 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Skill.projects#2]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.465 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.loader.Loader 2020.12.04 16:46:34.466 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.466 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Skill.projects#1]
+org.hibernate.SQL 2020.12.04 16:46:34.466 DEBUG [http-nio-8081-exec-2] o.h.SQL: select projects0_.skill_id as skill_id2_4_1_, projects0_.project_id as project_1_3_1_, project1_.id as id1_2_0_, project1_.name as name2_2_0_, project1_.preview as preview3_2_0_ from project_skill projects0_ inner join project project1_ on projects0_.project_id=project1_.id where projects0_.skill_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.468 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Skill.projects#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.468 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.468 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#2]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.468 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Skill.projects#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.468 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.468 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Skill.projects#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.468 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.loader.Loader 2020.12.04 16:46:34.469 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.470 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Project.links#2]
+org.hibernate.SQL 2020.12.04 16:46:34.470 DEBUG [http-nio-8081-exec-2] o.h.SQL: select links0_.project_id as project_4_2_2_, links0_.id as id1_0_2_, links0_.id as id1_0_1_, links0_.link_type_id as link_typ3_0_1_, links0_.project_id as project_4_0_1_, links0_.url as url2_0_1_, linktype1_.id as id1_1_0_, linktype1_.icon as icon2_1_0_, linktype1_.name as name3_1_0_ from link links0_ left outer join link_type linktype1_ on links0_.link_type_id=linktype1_.id where links0_.project_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.472 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Project.links#2]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.472 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.473 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.LinkType#1], EntityKey[com.t1gerok.diary.model.Link#2]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.473 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.links#2]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.473 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.LinkType#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.473 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.LinkType#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.473 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Link#2]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.473 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Link#2]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.473 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Project.links
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.473 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Project.links#2]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.473 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Project.links
+org.hibernate.loader.Loader 2020.12.04 16:46:34.474 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.474 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.LinkType.links#1]
+org.hibernate.SQL 2020.12.04 16:46:34.474 DEBUG [http-nio-8081-exec-2] o.h.SQL: select links0_.project_id as project_4_1_2_, links0_.id as id1_0_2_, links0_.id as id1_0_1_, links0_.link_type_id as link_typ3_0_1_, links0_.project_id as project_4_0_1_, links0_.url as url2_0_1_, linktype1_.id as id1_1_0_, linktype1_.icon as icon2_1_0_, linktype1_.name as name3_1_0_ from link links0_ left outer join link_type linktype1_ on links0_.link_type_id=linktype1_.id where links0_.project_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.476 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.LinkType.links#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.476 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.476 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.LinkType#1], EntityKey[com.t1gerok.diary.model.Link#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.476 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.LinkType.links#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.476 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Link#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.478 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading entity: [com.t1gerok.diary.model.Project#1]
+org.hibernate.SQL 2020.12.04 16:46:34.478 DEBUG [http-nio-8081-exec-2] o.h.SQL: select project0_.id as id1_2_0_, project0_.name as name2_2_0_, project0_.preview as preview3_2_0_ from project project0_ where project0_.id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.481 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.481 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.481 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Project#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.481 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Project#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.482 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done entity load
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.483 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Link#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.483 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.LinkType.links
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.483 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.LinkType.links#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.483 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.LinkType.links
+org.hibernate.loader.Loader 2020.12.04 16:46:34.484 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.484 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.SQL 2020.12.04 16:46:34.484 DEBUG [http-nio-8081-exec-2] o.h.SQL: select skills0_.project_id as project_1_2_1_, skills0_.skill_id as skill_id2_3_1_, skill1_.id as id1_4_0_, skill1_.icon as icon2_4_0_, skill1_.name as name3_4_0_ from project_skill skills0_ inner join skill skill1_ on skills0_.skill_id=skill1_.id where skills0_.project_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.485 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.485 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.485 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Skill#9]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 1
+org.hibernate.loader.Loader 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Skill#10]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 2
+org.hibernate.loader.Loader 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Skill#11]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Skill#9]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Skill#9]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Skill#10]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Skill#10]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.486 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Resolving associations for [com.t1gerok.diary.model.Skill#11]
+org.hibernate.engine.internal.TwoPhaseLoad 2020.12.04 16:46:34.487 DEBUG [http-nio-8081-exec-2] o.h.e.i.TwoPhaseLoad: Done materializing entity [com.t1gerok.diary.model.Skill#11]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.487 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Project.skills
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.487 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Project.skills#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.487 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Project.skills
+org.hibernate.loader.Loader 2020.12.04 16:46:34.488 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.488 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Skill.projects#11]
+org.hibernate.SQL 2020.12.04 16:46:34.488 DEBUG [http-nio-8081-exec-2] o.h.SQL: select projects0_.skill_id as skill_id2_4_1_, projects0_.project_id as project_1_3_1_, project1_.id as id1_2_0_, project1_.name as name2_2_0_, project1_.preview as preview3_2_0_ from project_skill projects0_ inner join project project1_ on projects0_.project_id=project1_.id where projects0_.skill_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.489 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Skill.projects#11]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.489 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.489 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.490 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Skill.projects#11]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.490 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.490 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Skill.projects#11]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.490 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.loader.Loader 2020.12.04 16:46:34.491 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.491 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Skill.projects#10]
+org.hibernate.SQL 2020.12.04 16:46:34.491 DEBUG [http-nio-8081-exec-2] o.h.SQL: select projects0_.skill_id as skill_id2_4_1_, projects0_.project_id as project_1_3_1_, project1_.id as id1_2_0_, project1_.name as name2_2_0_, project1_.preview as preview3_2_0_ from project_skill projects0_ inner join project project1_ on projects0_.project_id=project1_.id where projects0_.skill_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.492 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Skill.projects#10]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.492 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.492 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.492 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Skill.projects#10]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.493 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.493 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Skill.projects#10]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.493 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.loader.Loader 2020.12.04 16:46:34.494 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.495 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Skill.projects#9]
+org.hibernate.SQL 2020.12.04 16:46:34.495 DEBUG [http-nio-8081-exec-2] o.h.SQL: select projects0_.skill_id as skill_id2_4_1_, projects0_.project_id as project_1_3_1_, project1_.id as id1_2_0_, project1_.name as name2_2_0_, project1_.preview as preview3_2_0_ from project_skill projects0_ inner join project project1_ on projects0_.project_id=project1_.id where projects0_.skill_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.496 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Skill.projects#9]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.496 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.496 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.Project#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.496 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Skill.projects#9]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.496 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.496 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Skill.projects#9]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.496 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Skill.projects
+org.hibernate.loader.Loader 2020.12.04 16:46:34.497 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.497 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Loading collection: [com.t1gerok.diary.model.Project.links#1]
+org.hibernate.SQL 2020.12.04 16:46:34.497 DEBUG [http-nio-8081-exec-2] o.h.SQL: select links0_.project_id as project_4_2_2_, links0_.id as id1_0_2_, links0_.id as id1_0_1_, links0_.link_type_id as link_typ3_0_1_, links0_.project_id as project_4_0_1_, links0_.url as url2_0_1_, linktype1_.id as id1_1_0_, linktype1_.icon as icon2_1_0_, linktype1_.name as name3_1_0_ from link links0_ left outer join link_type linktype1_ on links0_.link_type_id=linktype1_.id where links0_.project_id=?
+org.hibernate.loader.Loader 2020.12.04 16:46:34.499 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set contains (possibly empty) collection: [com.t1gerok.diary.model.Project.links#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.499 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result set row: 0
+org.hibernate.loader.Loader 2020.12.04 16:46:34.499 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Result row: EntityKey[com.t1gerok.diary.model.LinkType#1], EntityKey[com.t1gerok.diary.model.Link#1]
+org.hibernate.loader.Loader 2020.12.04 16:46:34.499 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Found row of collection: [com.t1gerok.diary.model.Project.links#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.499 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections were found in result set for role: com.t1gerok.diary.model.Project.links
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.499 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: Collection fully initialized: [com.t1gerok.diary.model.Project.links#1]
+org.hibernate.engine.loading.internal.CollectionLoadContext 2020.12.04 16:46:34.499 DEBUG [http-nio-8081-exec-2] o.h.e.l.i.CollectionLoadContext: 1 collections initialized for role: com.t1gerok.diary.model.Project.links
+org.hibernate.loader.Loader 2020.12.04 16:46:34.500 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done loading collection
+org.hibernate.loader.Loader 2020.12.04 16:46:34.500 DEBUG [http-nio-8081-exec-2] o.h.l.Loader: Done entity load
+org.hibernate.engine.transaction.spi.AbstractTransactionImpl 2020.12.04 16:46:34.500 DEBUG [http-nio-8081-exec-2] o.h.e.t.s.AbstractTransactionImpl: committing
+org.hibernate.event.internal.AbstractFlushingEventListener 2020.12.04 16:46:34.500 DEBUG [http-nio-8081-exec-2] o.h.e.i.AbstractFlushingEventListener: Processing flush-time cascades
+org.hibernate.event.internal.AbstractFlushingEventListener 2020.12.04 16:46:34.500 DEBUG [http-nio-8081-exec-2] o.h.e.i.AbstractFlushingEventListener: Dirty checking collections
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Project.links#2], was: [com.t1gerok.diary.model.Project.links#2] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Project.skills#2], was: [com.t1gerok.diary.model.Project.skills#2] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Skill.projects#1], was: [com.t1gerok.diary.model.Skill.projects#1] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Skill.projects#2], was: [com.t1gerok.diary.model.Skill.projects#2] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.LinkType.links#1], was: [com.t1gerok.diary.model.LinkType.links#1] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Project.links#1], was: [com.t1gerok.diary.model.Project.links#1] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Project.skills#1], was: [com.t1gerok.diary.model.Project.skills#1] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Skill.projects#9], was: [com.t1gerok.diary.model.Skill.projects#9] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Skill.projects#10], was: [com.t1gerok.diary.model.Skill.projects#10] (initialized)
+org.hibernate.engine.internal.Collections 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.Collections: Collection found: [com.t1gerok.diary.model.Skill.projects#11], was: [com.t1gerok.diary.model.Skill.projects#11] (initialized)
+org.hibernate.event.internal.AbstractFlushingEventListener 2020.12.04 16:46:34.501 DEBUG [http-nio-8081-exec-2] o.h.e.i.AbstractFlushingEventListener: Flushed: 0 insertions, 0 updates, 0 deletions to 10 objects
+org.hibernate.event.internal.AbstractFlushingEventListener 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.e.i.AbstractFlushingEventListener: Flushed: 0 (re)creations, 0 updates, 0 removals to 10 collections
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: Listing entities:
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Skill{projects=[com.t1gerok.diary.model.Project#1], icon=../assets/icons/mybatis.png, name=MyBatis, id=11}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Skill{projects=[com.t1gerok.diary.model.Project#2], icon=../assets/icons/html.png, name=HTML, id=1}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.LinkType{icon=../assets/icons/github.png, name=GitHub, links=[com.t1gerok.diary.model.Link#1], id=1}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Link{project=com.t1gerok.diary.model.Project#1, linkType=com.t1gerok.diary.model.LinkType#1, id=1, url=https://github.com/T1GeRTR/hospital}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Project{preview=previewUrl, skills=[com.t1gerok.diary.model.Skill#9, com.t1gerok.diary.model.Skill#10, com.t1gerok.diary.model.Skill#11], name=Hospital - Воскресная школа ТамТэк, links=[com.t1gerok.diary.model.Link#1], id=1}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Project{preview=previewUrl, skills=[com.t1gerok.diary.model.Skill#1, com.t1gerok.diary.model.Skill#2], name=Верстка по видео уроку, links=[com.t1gerok.diary.model.Link#2], id=2}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Skill{projects=[com.t1gerok.diary.model.Project#2], icon=../assets/icons/css.png, name=CSS, id=2}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Link{project=com.t1gerok.diary.model.Project#2, linkType=com.t1gerok.diary.model.LinkType#1, id=2, url=https://github.com/T1GeRTR/1-day-video-tutorial-html-css}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Skill{projects=[com.t1gerok.diary.model.Project#1], icon=../assets/icons/java.png, name=Java, id=9}
+org.hibernate.internal.util.EntityPrinter 2020.12.04 16:46:34.502 DEBUG [http-nio-8081-exec-2] o.h.i.u.EntityPrinter: com.t1gerok.diary.model.Skill{projects=[com.t1gerok.diary.model.Project#1], icon=../assets/icons/spring.png, name=Spring, id=10}
+org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction 2020.12.04 16:46:34.503 DEBUG [http-nio-8081-exec-2] o.h.e.t.i.j.JdbcTransaction: committed JDBC Connection
+org.hibernate.engine.jdbc.internal.LogicalConnectionImpl 2020.12.04 16:46:34.503 DEBUG [http-nio-8081-exec-2] o.h.e.j.i.LogicalConnectionImpl: Releasing JDBC connection
+org.hibernate.engine.jdbc.internal.LogicalConnectionImpl 2020.12.04 16:46:34.503 DEBUG [http-nio-8081-exec-2] o.h.e.j.i.LogicalConnectionImpl: Released JDBC connection
+org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor 2020.12.04 16:46:34.503 DEBUG [http-nio-8081-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor: Using 'application/json', given [*/*] and supported [application/json]
+org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor 2020.12.04 16:46:34.504 DEBUG [http-nio-8081-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor: Writing [com.t1gerok.diary.response.GetByIdProjectDtoResponse@5d38997c]
+org.springframework.web.servlet.DispatcherServlet 2020.12.04 16:46:34.505 DEBUG [http-nio-8081-exec-2] o.s.w.s.DispatcherServlet: Completed 200 OK

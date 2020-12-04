@@ -16,7 +16,7 @@ public class LinkType {
     private String name;
     @Column(name = "icon")
     private String icon;
-    @OneToMany(targetEntity = Link.class, mappedBy = "project", cascade = CascadeType.MERGE)
+    @OneToMany(targetEntity = Link.class, mappedBy = "project", cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private List<Link> links = new ArrayList<>();
 
     public LinkType() {

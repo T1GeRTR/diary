@@ -10,10 +10,17 @@ public class EditLinkTypeDtoRequest {
     @NotNull
     private String icon;
 
+    public EditLinkTypeDtoRequest() {
+    }
+
     public EditLinkTypeDtoRequest(@NotNull int id, @NotNull String name, @NotNull String icon) {
         this.id = id;
         this.name = name;
         this.icon = icon;
+    }
+
+    public EditLinkTypeDtoRequest(@NotNull String name, @NotNull String icon) {
+        this(0, name, icon);
     }
 
     public int getId() {

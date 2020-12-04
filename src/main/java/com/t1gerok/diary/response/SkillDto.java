@@ -1,49 +1,42 @@
 package com.t1gerok.diary.response;
 
-import java.util.List;
+import com.t1gerok.diary.model.Project;
 
-public class GetAllSkillDtoResponse {
-    private int id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class SkillDto {
+    private Integer id;
     private String name;
     private String icon;
-    private List<ProjectDto> projects;
 
-    public GetAllSkillDtoResponse(int id, String name, String icon, List<ProjectDto> projects) {
+    public SkillDto(Integer id, String name, String icon) {
         this.id = id;
         this.name = name;
         this.icon = icon;
-        this.projects = projects;
     }
 
-    public int getId() {
+    public SkillDto() {
+    }
+
+    public Integer getId() {
         return id;
     }
-
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getIcon() {
         return icon;
     }
-
     public void setIcon(String icon) {
         this.icon = icon;
-    }
-
-    public List<ProjectDto> getProjects() {
-        return projects;
-    }
-
-    public void setProjects(List<ProjectDto> projects) {
-        this.projects = projects;
     }
 }

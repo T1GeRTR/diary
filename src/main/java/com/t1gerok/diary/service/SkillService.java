@@ -1,5 +1,6 @@
 package com.t1gerok.diary.service;
 
+import com.t1gerok.diary.converter.Converter;
 import com.t1gerok.diary.dao.SkillDao;
 import com.t1gerok.diary.exception.DiaryException;
 import com.t1gerok.diary.exception.ErrorCode;
@@ -61,7 +62,7 @@ public class SkillService {
         if (skill == null) {
             throw new DiaryException(ErrorCode.CANT_FIND_SKILL_BY_ID, id);
         }
-        return new GetByIdSkillDtoResponse(skill.getId(), skill.getName(), skill.getIcon(), skill.getProjects());
+        return new GetByIdSkillDtoResponse(skill.getId(), skill.getName(), skill.getIcon(), Converter.convertProjectModelToDto(skill.getProjects()));
     }
 
     public List<GetAllSkillDtoResponse> getAll() throws DiaryException {
@@ -72,7 +73,7 @@ public class SkillService {
         }
         List<GetAllSkillDtoResponse> responses = new ArrayList<>();
         for (Skill elem : skills) {
-            responses.add(new GetAllSkillDtoResponse(elem.getId(), elem.getName(), elem.getIcon(), elem.getProjects()));
+            responses.add(new GetAllSkillDtoResponse(elem.getId(), elem.getName(), elem.getIcon(), Converter.convertProjectModelToDto(elem.getProjects())));
         }
         return responses;
     }

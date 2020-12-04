@@ -19,6 +19,9 @@ public class EditProjectDtoRequest {
     @NotNull
     private List<Integer> linkIds;
 
+    public EditProjectDtoRequest() {
+    }
+
     public EditProjectDtoRequest(@NotNull int id, @NotNull String name, @NotNull String preview, @NotNull List<Integer> skillIds, @NotNull List<Integer> linkIds) {
         this.id = id;
         this.name = name;

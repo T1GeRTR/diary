@@ -18,6 +18,9 @@ public class InsertProjectDtoRequest {
     @NotNull
     private List<Integer> linkIds;
 
+    public InsertProjectDtoRequest() {
+    }
+
     public InsertProjectDtoRequest(@NotNull String name, @NotNull String preview, @NotNull List<Integer> skillIds, @NotNull List<Integer> linkIds) {
         this.name = name;
         this.preview = preview;

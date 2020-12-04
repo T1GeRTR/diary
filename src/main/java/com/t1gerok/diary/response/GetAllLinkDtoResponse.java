@@ -8,11 +8,11 @@ import java.util.List;
 
 public class GetAllLinkDtoResponse {
     private int id;
-    private Project project;
-    private LinkType linkType;
+    private ProjectDto project;
+    private LinkTypeDto linkType;
     private String url;
 
-    public GetAllLinkDtoResponse(int id, Project project, LinkType linkType, String url) {
+    public GetAllLinkDtoResponse(int id, ProjectDto project, LinkTypeDto linkType, String url) {
         this.id = id;
         this.project = project;
         this.linkType = linkType;
@@ -27,19 +27,19 @@ public class GetAllLinkDtoResponse {
         this.id = id;
     }
 
-    public Project getProject() {
+    public ProjectDto getProject() {
         return project;
     }
 
-    public void setProject(Project project) {
+    public void setProject(ProjectDto project) {
         this.project = project;
     }
 
-    public LinkType getLinkType() {
+    public LinkTypeDto getLinkType() {
         return linkType;
     }
 
-    public void setLinkType(LinkType linkType) {
+    public void setLinkType(LinkTypeDto linkType) {
         this.linkType = linkType;
     }
 

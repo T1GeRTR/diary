@@ -9,9 +9,9 @@ public class GetByIdSkillDtoResponse {
     private int id;
     private String name;
     private String icon;
-    private List<Project> projects;
+    private List<ProjectDto> projects;
 
-    public GetByIdSkillDtoResponse(int id, String name, String icon, List<Project> projects) {
+    public GetByIdSkillDtoResponse(int id, String name, String icon, List<ProjectDto> projects) {
         this.id = id;
         this.name = name;
         this.icon = icon;
@@ -42,11 +42,11 @@ public class GetByIdSkillDtoResponse {
         this.icon = icon;
     }
 
-    public List<Project> getProjects() {
+    public List<ProjectDto> getProjects() {
         return projects;
     }
 
-    public void setProjects(List<Project> projects) {
+    public void setProjects(List<ProjectDto> projects) {
         this.projects = projects;
     }
 }

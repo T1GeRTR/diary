@@ -12,11 +12,18 @@ public class EditLinkDtoRequest {
     @NotNull
     private String url;
 
+    public EditLinkDtoRequest() {
+    }
+
     public EditLinkDtoRequest(@NotNull int id, @NotNull Integer projectId, @NotNull Integer linkTypeId, @NotNull String url) {
         this.id = id;
         this.projectId = projectId;
         this.linkTypeId = linkTypeId;
         this.url = url;
+    }
+
+    public EditLinkDtoRequest(@NotNull Integer projectId, @NotNull Integer linkTypeId, @NotNull String url) {
+        this(0, projectId, linkTypeId, url);
     }
 
     public int getId() {

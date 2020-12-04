@@ -1,32 +1,25 @@
 package com.t1gerok.diary.response;
 
-public class InsertLinkDtoResponse {
-    private int id;
-    private ProjectDto project;
+public class LinkDtoLinkType {
+    private Integer id;
     private LinkTypeDto linkType;
     private String url;
 
-    public InsertLinkDtoResponse(int id, ProjectDto project, LinkTypeDto linkType, String url) {
+    public LinkDtoLinkType() {
+    }
+
+    public LinkDtoLinkType(Integer id, LinkTypeDto linkType, String url) {
         this.id = id;
-        this.project = project;
         this.linkType = linkType;
         this.url = url;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    public ProjectDto getProject() {
-        return project;
-    }
-
-    public void setProject(ProjectDto project) {
-        this.project = project;
     }
 
     public LinkTypeDto getLinkType() {

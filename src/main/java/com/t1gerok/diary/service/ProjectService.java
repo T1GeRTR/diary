@@ -1,5 +1,6 @@
 package com.t1gerok.diary.service;
 
+import com.t1gerok.diary.converter.Converter;
 import com.t1gerok.diary.dao.LinkDao;
 import com.t1gerok.diary.dao.ProjectDao;
 import com.t1gerok.diary.dao.SkillDao;
@@ -59,7 +60,7 @@ public class ProjectService {
         if (project.getId() == 0) {
             throw new DiaryException(ErrorCode.CANT_INSERT_PROJECT_NAME, request.getName());
         }
-        return new InsertProjectDtoResponse(project.getId(), project.getName(), project.getPreview(), project.getSkills(), project.getLinks());
+        return new InsertProjectDtoResponse(project.getId(), project.getName(), project.getPreview(), Converter.convertSkillModelToDto(project.getSkills()), Converter.convertLinkModelToDtoLinkType(project.getLinks()));
     }
 
     public EmptyResponse delete(int id) throws DiaryException {
@@ -98,7 +99,7 @@ public class ProjectService {
         if (project == null){
             throw new DiaryException(ErrorCode.CANT_FIND_PROJECT_BY_ID, id);
         }
-        return new GetByIdProjectDtoResponse(project.getId(), project.getName(), project.getPreview(), project.getSkills(), project.getLinks());
+        return new GetByIdProjectDtoResponse(project.getId(), project.getName(), project.getPreview(), Converter.convertSkillModelToDto(project.getSkills()), Converter.convertLinkModelToDtoLinkType(project.getLinks()));
     }
 
     public List<GetAllProjectDtoResponse> getAll() throws DiaryException{
@@ -109,7 +110,7 @@ public class ProjectService {
         }
         List<GetAllProjectDtoResponse> responses = new ArrayList<>();
         for(Project elem: projects){
-            responses.add(new GetAllProjectDtoResponse(elem.getId(), elem.getName(), elem.getPreview(), elem.getSkills(), elem.getLinks()));
+            responses.add(new GetAllProjectDtoResponse(elem.getId(), elem.getName(), elem.getPreview(), Converter.convertSkillModelToDto(elem.getSkills()), Converter.convertLinkModelToDtoLinkType(elem.getLinks())));
         }
         return responses;
     }

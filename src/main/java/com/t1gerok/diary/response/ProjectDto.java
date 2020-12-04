@@ -1,16 +1,22 @@
 package com.t1gerok.diary.response;
 
+import com.t1gerok.diary.model.Link;
+import com.t1gerok.diary.model.Skill;
+
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
+public class ProjectDto {
 
-public class InsertProjectDtoResponse {
     private Integer id;
     private String name;
     private String preview;
     private List<SkillDto> skills;
     private List<LinkDtoLinkType> links;
 
-    public InsertProjectDtoResponse(Integer id, String name, String preview, List<SkillDto> skills, List<LinkDtoLinkType> links) {
+    public ProjectDto(Integer id, String name, String preview, List<SkillDto> skills, List<LinkDtoLinkType> links) {
         this.id = id;
         this.name = name;
         this.preview = preview;
@@ -18,7 +24,7 @@ public class InsertProjectDtoResponse {
         this.links = links;
     }
 
-    public InsertProjectDtoResponse() {
+    public ProjectDto() {
     }
 
     public Integer getId() {

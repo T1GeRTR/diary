@@ -8,6 +8,9 @@ public class InsertSkillDtoRequest {
     @NotNull
     private String icon;
 
+    public InsertSkillDtoRequest() {
+    }
+
     public InsertSkillDtoRequest(@NotNull String name, @NotNull String icon) {
         this.name = name;
         this.icon = icon;
